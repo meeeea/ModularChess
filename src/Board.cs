@@ -2,7 +2,9 @@ class Board {
     private List<List<Piece>> _board = new List<List<Piece>>();
 
     private int _width;
+    public int width {get => _width;}
     private int _height;
+    public int height {get => _height;}
 
     public Piece this[int x, int y] {
         get {return _board[x][y];}
@@ -20,12 +22,13 @@ class Board {
         }
     }
 
+    // displays the board (what else)
     public void Display() {
         for (int i = 0; i < _height; i++) {
             Console.WriteLine("+" + string.Concat(Enumerable.Repeat("---+", _width)));
             Console.Write("|");
             for (int k = 0; k < _width; k++) {
-                Console.Write($" {_board[i][k].Display()} |");
+                Console.Write($" {_board[k][i].Display()} |");
             }
             Console.WriteLine();
         }
