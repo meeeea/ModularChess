@@ -23,7 +23,7 @@ class Board {
     }
 
     // displays the board (what else)
-    public void Display() {
+    public void ConsoleDisplay() {
         for (int i = 0; i < _height; i++) {
             Console.WriteLine("+" + string.Concat(Enumerable.Repeat("---+", _width)));
             Console.Write("|");
