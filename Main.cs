@@ -1,7 +1,7 @@
 class Project {
-    public static Board board = new Board(3,5);
+    public static Board board = new Chess();
 
     public static void Main() {
-
+        board.ConsoleDisplay();
     }
 }
