@@ -37,9 +37,10 @@ class Board {
     public void ConsoleDisplay() {
         for (int i = _height - 1; i >= 0; i--) {
             Console.WriteLine("+" + string.Concat(Enumerable.Repeat("---+", _width)));
-            Console.Write("|");
+            Console.Write("| ");
             for (int k = 0; k < _width; k++) {
-                Console.Write($" {_board[k][i].Display()} |");
+                _board[k][i].Display();
+                Console.Write(" | ");
             }
             Console.WriteLine();
         }
