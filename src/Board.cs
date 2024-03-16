@@ -1,5 +1,5 @@
 class Board {
-    private List<List<Piece>> _board = new List<List<Piece>>();
+    protected List<List<Piece>> _board = new List<List<Piece>>();
 
     // how other classes will access the actual board.
     public Piece this[int x, int y] {
@@ -7,9 +7,9 @@ class Board {
         set {_board[x][y] = value;}
     }
 
-    private int _width;
+    protected int _width;
     public int width {get => _width;}
-    private int _height;
+    protected int _height;
     public int height {get => _height;}
 
     public Board(int x = 8, int y = 8) {
