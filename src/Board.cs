@@ -1,15 +1,16 @@
 class Board {
     private List<List<Piece>> _board = new List<List<Piece>>();
 
-    private int _width;
-    public int width {get => _width;}
-    private int _height;
-    public int height {get => _height;}
-
+    // how other classes will access the actual board.
     public Piece this[int x, int y] {
         get {return _board[x][y];}
         set {_board[x][y] = value;}
     }
+
+    private int _width;
+    public int width {get => _width;}
+    private int _height;
+    public int height {get => _height;}
 
     public Board(int x = 8, int y = 8) {
         _width = x;
