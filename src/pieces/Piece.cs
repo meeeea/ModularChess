@@ -21,7 +21,9 @@ class Piece {
         
     }
 
-    public string Display() {
-        return _displayName;
+    public void Display() {
+        Console.ForegroundColor = _team.color;
+        Console.Write(_displayName);
+        Console.ForegroundColor = ConsoleColor.White;
     }
 }
