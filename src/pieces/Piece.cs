@@ -9,8 +9,16 @@ class Piece {
     // i intend on adding support for help info to say what a piece does.
     protected string _helpInfo = "";
 
-    public Piece(string name = "") {
+    protected Team _team;
+    public Team team {get => _team;}
+
+    public Piece(string name, Team theTeam) {
         _displayName = name;
+        _team = theTeam;
+    }
+
+    protected Piece() {
+        
     }
 
     public string Display() {
