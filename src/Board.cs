@@ -7,6 +7,11 @@ class Board {
         set {_board[x][y] = value;}
     }
 
+    public Piece this[Position position] {
+        get {return _board[position.X][position.Y];}
+        set {_board[position.X][position.Y] = value;}
+    }
+
     protected int _width;
     public int width {get => _width;}
     protected int _height;
@@ -30,7 +35,7 @@ class Board {
 
     // displays the board (what else)
     public void ConsoleDisplay() {
-        for (int i = 0; i < _height; i++) {
+        for (int i = _height - 1; i >= 0; i--) {
             Console.WriteLine("+" + string.Concat(Enumerable.Repeat("---+", _width)));
             Console.Write("|");
             for (int k = 0; k < _width; k++) {
