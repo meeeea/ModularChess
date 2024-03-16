@@ -18,9 +18,14 @@ class Board {
         for (int i = 0; i < x; i++) {
             _board.Add(new List<Piece>());
             for (int k = 0; k < y; k++) {
-                _board[i].Add(new Piece("a"));
+                _board[i].Add(new Empty());
             }
         }
+    }
+
+    public void Move(int[] first, int[] second) {
+        _board[second[0]][second[1]] = _board[first[0]][first[1]];
+        _board[first[0]][first[1]] = new Empty();
     }
 
     // displays the board (what else)
