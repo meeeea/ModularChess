@@ -1,0 +1,25 @@
+distances:
+1 -> move 1 step (ie. adgecent)
+2 -> move 2 steps 
+n -> move until interupted (like a rook)
+
+direction:
+| -> verttical
+- -> horizontal
+/ -> diagonal
+f -> constrained to forward
+l -> constrained to left
+r -> constrained to right
+b -> constrained to back
+
+constraints:
+c -> only a capture
+m -> only a move
+j -> only on the first move
+
+grouping:
+, -> seperate diferent move patterns
+[] -> used for "bouncing" moves (ie: the lion from chu shogi)
+
+examples:
+a pawn for example would have the move "1|fm,2|fmj,1/fc"
