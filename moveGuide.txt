@@ -1,11 +1,10 @@
 distances:
 1 -> move 1 step (ie. adgecent)
 2 -> move 2 steps 
-n -> move until interupted (like a rook)
+x -> move until interupted (like a rook)
 
 direction:
-| -> verttical
-- -> horizontal
++ -> general orthagonal
 / -> diagonal
 f -> constrained to forward
 l -> constrained to left
@@ -23,3 +22,4 @@ grouping:
 
 examples:
 a pawn for example would have the move "1|fm,2|fmj,1/fc"
+a rook "x+"
