@@ -22,8 +22,13 @@ class Piece {
     }
 
     public void Display() {
-        Console.ForegroundColor = GameManager.Board.Teams[team].color;
-        Console.Write(_displayName);
-        Console.ForegroundColor = ConsoleColor.White;
+        if (team == -1) {
+            Console.Write(_displayName);
+        }
+        else {
+            Console.ForegroundColor = Project.board.Teams[team].color;
+            Console.Write(_displayName);
+            Console.ForegroundColor = ConsoleColor.White;
+        }
     }
 }

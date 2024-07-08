@@ -1,7 +1,9 @@
-class Board {
+abstract class Board {
     protected List<List<Piece>> _board = new List<List<Piece>>();
 
-    public List<Team> Teams;
+    public abstract List<Team> Teams {
+        get;
+    }
 
     // how other classes will access the actual board.
     public Piece this[int x, int y] {

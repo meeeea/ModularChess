@@ -1,6 +1,6 @@
 class Chess : Board {
     private static Dictionary<Position, Piece> BoardInitialization = new Dictionary<Position, Piece>();
-    public new List<Team> Teams = new List<Team>() {new Team("Red", new StepVector(1, 0), ConsoleColor.Red),
+    public override List<Team> Teams => new List<Team>() {new Team("Red", new StepVector(1, 0), ConsoleColor.Red),
                                                 new Team("Blue", new StepVector(-1, 0), ConsoleColor.Blue)};
     public Chess() : base(8, 8) {
         SetDefaultPieces();
