@@ -1,5 +1,5 @@
 class Bishop : Piece {
-    public Bishop(Team theTeam) : base("B", theTeam) {
+    public Bishop(int theTeam) : base("B", theTeam) {
         _move = "/+";
     }
 }

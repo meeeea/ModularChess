@@ -1,5 +1,5 @@
 class Queen : Piece {
-    public Queen(Team theTeam) : base("Q", theTeam) {
+    public Queen(int theTeam) : base("Q", theTeam) {
         _move = "x+,x/";
     }
 }

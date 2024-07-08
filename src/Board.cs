@@ -1,6 +1,8 @@
 class Board {
     protected List<List<Piece>> _board = new List<List<Piece>>();
 
+    public List<Team> Teams;
+
     // how other classes will access the actual board.
     public Piece this[int x, int y] {
         get {return _board[x][y];}

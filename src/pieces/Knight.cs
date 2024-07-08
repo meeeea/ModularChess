@@ -1,5 +1,5 @@
 class Knight : Piece {
-    public Knight(Team theTeam) : base("N", theTeam) {
+    public Knight(int theTeam) : base("N", theTeam) {
         
     }
 }

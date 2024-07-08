@@ -1,5 +1,5 @@
 class Rook : Piece {
-    public Rook(Team theTeam) : base("R", theTeam){
+    public Rook(int theTeam) : base("R", theTeam){
         _move = "x+";
     }
 }

@@ -9,12 +9,12 @@ class Piece {
     // i intend on adding support for help info to say what a piece does.
     protected string _helpInfo = "";
 
-    protected Team _team;
-    public Team team {get => _team;}
+    protected int _teamID;
+    public int team {get => _teamID;}
 
-    public Piece(string name, Team theTeam) {
+    public Piece(string name, int theTeam) {
         _displayName = name;
-        _team = theTeam;
+        _teamID = theTeam;
     }
 
     protected Piece() {
@@ -22,7 +22,7 @@ class Piece {
     }
 
     public void Display() {
-        Console.ForegroundColor = _team.color;
+        Console.ForegroundColor = GameManager.Board.Teams[team].color;
         Console.Write(_displayName);
         Console.ForegroundColor = ConsoleColor.White;
     }
