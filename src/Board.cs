@@ -50,4 +50,32 @@ abstract class Board {
         }
         Console.WriteLine("+" + string.Concat(Enumerable.Repeat("---+", _width)));
     }
+
+    public void ConsoleDisplay(MoveOptions moveOptions) {
+        for (int i = _height - 1; i >= 0; i--) {
+            Console.WriteLine("+" + string.Concat(Enumerable.Repeat("---+", _width)));
+            Console.Write("|");
+            for (int k = 0; k < _width; k++) {
+                int move = moveOptions[i, k];
+                if (move == 0) {
+                    Console.Write(' ');
+                    _board[k][i].Display();
+                    Console.Write(' ');
+                }
+                else if (move == 1) {
+                    Console.Write('<');
+                    _board[k][i].Display();
+                    Console.Write('>');
+                }
+                else if (move == 2) {
+                    Console.Write('[');
+                    _board[k][i].Display();
+                    Console.Write(']');
+                }
+                Console.Write("|");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine("+" + string.Concat(Enumerable.Repeat("---+", _width)));
+    }
 }

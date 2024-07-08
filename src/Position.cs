@@ -30,4 +30,11 @@ class Position {
     protected Position() {
 
     }
+
+    public bool SamePos(int x, int y) {
+        if (_x == x && _y == y) {
+            return true;
+        }
+        return false;
+    }
 }
