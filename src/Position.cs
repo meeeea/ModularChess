@@ -5,8 +5,8 @@ class Position {
         set {if (value < 0) {
                 _x = 0;
             }
-            if (value < Project.board.width) {
-                _x = Project.board.width;
+            if (value < Project.board.Width) {
+                _x = Project.board.Width;
             }
         }
     }
@@ -16,8 +16,8 @@ class Position {
         set {if (value < 0) {
                 _y = 0;
             }
-            if (value < Project.board.width) {
-                _y = Project.board.width;
+            if (value < Project.board.Width) {
+                _y = Project.board.Width;
             }
         }
     }

@@ -1,8 +1,11 @@
+using System.Text.RegularExpressions;
+
 class Project {
     public static Board board = new Chess();
 
     public static void Main() {
-        RunGame();
+        //RunGame();
+        new MoveOptions(board, new Position(4, 2));
     }
 
     public static void RunGame() {

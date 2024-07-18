@@ -3,18 +3,23 @@ distances:
 2 -> move 2 steps 
 x -> move until interupted (like a rook)
 
-direction:
+directional constraints:
 + -> Lock orthagonal
 / -> Lock diagonal
 f -> Lock forward
 l -> Lock left
 r -> Lock right
 b -> Lock back
+| -> or constraints
 
-constraints:
+leaping moves (ie. knight from chess):
+(d1,d2) -> selects all the points that can be accived with that move pattern.
+
+move type constraints:
 c -> only a capture
 m -> only a move
 j -> only on the first move
+k -> canno't move into capture
 
 grouping:
 , -> seperate diferent move patterns
@@ -23,3 +28,5 @@ grouping:
 examples:
 a pawn for example would have the move "1+fm,2+fmj,1/fc"
 a rook "x+"
+a chess kight would be (1,2)
+wereas a shogi knight would be (1,2)f

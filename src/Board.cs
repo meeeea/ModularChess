@@ -17,9 +17,9 @@ abstract class Board {
     }
 
     protected int _width;
-    public int width {get => _width;}
+    public int Width {get => _width;}
     protected int _height;
-    public int height {get => _height;}
+    public int Height {get => _height;}
 
     public Board(int x = 8, int y = 8) {
         _width = x;
