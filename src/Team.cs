@@ -1,5 +1,3 @@
-using System.Numerics;
-
 class Team {
     private string _team = "";
     public string team {get => _team;}
