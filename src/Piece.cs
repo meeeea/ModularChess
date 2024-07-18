@@ -1,6 +1,7 @@
 class Piece {
     // what is display's as. still not sure how this is going to work.
     protected string _displayName = "";
+    public string displayName => _displayName;
 
     // move will be described as in Betza's funny notation for fairy chess.
     protected string _move = "";
