@@ -39,16 +39,28 @@ abstract class Board {
 
     // displays the board (what else)
     public void ConsoleDisplay() {
+        Console.WriteLine("+" + string.Concat(Enumerable.Repeat("---+", _width + 2)));
+        Console.Write("|   |");
+        for (int i = 0; i < _width; i++) {
+            Console.Write($" {i + 1} |");
+        }
+        Console.WriteLine("   |");
         for (int i = _height - 1; i >= 0; i--) {
-            Console.WriteLine("+" + string.Concat(Enumerable.Repeat("---+", _width)));
-            Console.Write("| ");
+            Console.WriteLine("+" + string.Concat(Enumerable.Repeat("---+", _width + 2)));
+            Console.Write($"| {i + 1} | ");
             for (int k = 0; k < _width; k++) {
                 _board[k][i].Display();
                 Console.Write(" | ");
             }
-            Console.WriteLine();
+            Console.WriteLine($"{i + 1} |");
         }
-        Console.WriteLine("+" + string.Concat(Enumerable.Repeat("---+", _width)));
+        Console.WriteLine("+" + string.Concat(Enumerable.Repeat("---+", _width + 2)));
+        Console.Write("|   |");
+        for (int i = 0; i < _width; i++) {
+            Console.Write($" {i + 1} |");
+        }
+        Console.WriteLine("   |");
+        Console.WriteLine("+" + string.Concat(Enumerable.Repeat("---+", _width + 2)));
     }
 
     public void ConsoleDisplay(MoveOptions moveOptions) {
